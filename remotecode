@@ -1,0 +1,86 @@
+#include <Servo.h>
+
+const int motor1Pin=13;
+const int motor2Pin=12;
+const int motor3Pin=11;
+const int motor4Pin=10;
+
+const int button1Pin=7;
+const int button2Pin=6;
+const int button3Pin=5;
+const int button4Pin=4;
+
+Servo microServo1;
+Servo microServo2;
+
+void setup(){
+  
+  pinMode(motor1Pin,OUTPUT);
+  pinMode(motor2Pin,OUTPUT);
+  pinMode(motor3Pin,OUTPUT);
+  pinMode(motor4Pin,OUTPUT);
+  
+  pinMode(button1Pin,INPUT);
+  pinMode(button2Pin,INPUT);  
+  pinMode(button3Pin,INPUT);  
+  pinMode(button4Pin,INPUT);  
+  
+  microServo1.attach(2);
+  microServo2.attach(3);
+    
+
+}
+
+void loop(){
+  
+  bool button1State=digitalRead(button1Pin);
+  bool button2State=digitalRead(button2Pin);
+  bool button3State=digitalRead(button3Pin);
+  bool button4State=digitalRead(button4Pin);
+  
+  if (button1State==HIGH){
+    
+    digitalWrite(motor1Pin,HIGH);
+    digitalWrite(motor2Pin,HIGH);
+    
+  } else{
+    digitalWrite(motor1Pin,LOW);
+    digitalWrite(motor2Pin,LOW);
+  
+  }
+   if (button2State==HIGH){
+    
+    digitalWrite(motor3Pin,HIGH);
+    digitalWrite(motor4Pin,HIGH);
+    
+  } else{
+    digitalWrite(motor3Pin,LOW);
+    digitalWrite(motor4Pin,LOW);
+  
+  }
+   if (button3State==HIGH){
+     microServo1.write(90);
+     delay(15);
+
+    
+  } else{
+     microServo1.write(0);
+     delay(15);
+   
+  
+  }
+  
+    if (button4State==HIGH){
+     microServo2.write(90);
+     delay(15);
+
+    
+  } else{
+     microServo2.write(0);
+     delay(15);
+   
+  
+  }
+
+
+}
