@@ -1,5 +1,6 @@
 # REMOTE-CONTROL-CAR-ARDUIINO-TINKERCAD
-![RMOTE CAR BLUETOOTH](https://github.com/user-attachments/assets/b4cd082d-929a-416d-a402-3ef2d46fea74)
+
+![RMOTE CAR BLUETOOTH (1)](https://github.com/user-attachments/assets/b878df3b-c3ab-45b0-b47a-25780dd59a32)
 
 This code is an Arduino sketch that controls four motors and two servos based on input from four push buttons. Here's a general description:
 
